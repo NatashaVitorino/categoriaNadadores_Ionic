@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Idade Nadadores
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+
+  <div id="container">
+
+    <ion-list>
+      <ion-radio-group>
+        <ion-list-header>
+          <ion-label>Selecione sua Idade</ion-label>
+        </ion-list-header>
+
+        <ion-item>
+        <ion-label>5 a 7 anos</ion-label>
+        <ion-radio slot="end" value="idade1" (ionFocus)="verificarChecado('1')"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>8 a 10 anos</ion-label>
+          <ion-radio slot="end" value="idade2" (ionFocus)="verificarChecado('2')"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>11 a 13 anos</ion-label>
+          <ion-radio slot="end" value="idade3" (ionFocus)="verificarChecado('3')"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>14 a 17 anos</ion-label>
+          <ion-radio slot="end" value="idade4" (ionFocus)="verificarChecado('4')"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Maior de 18 anos</ion-label>
+          <ion-radio slot="end" value="idade5" (ionFocus)="verificarChecado('5')"></ion-radio>
+        </ion-item>
+
+      </ion-radio-group>
+    </ion-list>
+
+    <ion-input readonly="true" value={{res}}></ion-input>
+
+  </div>
+
+</ion-content>
